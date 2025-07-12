@@ -29,7 +29,7 @@ def chat():
     
     # 验证模型是否有效
     if model not in MODELS:
-        return jsonify({"error": f"Invalid model: {model}. Available models: {list(MODELS.keys())"}), 400
+        return jsonify({"error": f"Invalid model: {model}. Available models: {list(MODELS.keys())}"}), 400
     
     # 过滤掉没有content的消息
     filtered_history = [m for m in history if m.get("content")]
